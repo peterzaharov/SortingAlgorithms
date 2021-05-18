@@ -40,6 +40,7 @@ namespace SortingAlgorithms
             this.FillButton = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BubbleSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace SortingAlgorithms
             this.panel1.Controls.Add(this.AddTextBox);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 65);
+            this.panel1.Size = new System.Drawing.Size(315, 70);
             this.panel1.TabIndex = 5;
             // 
             // label3
@@ -102,9 +103,9 @@ namespace SortingAlgorithms
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.FillButton);
             this.panel2.Controls.Add(this.FillTextBox);
-            this.panel2.Location = new System.Drawing.Point(12, 83);
+            this.panel2.Location = new System.Drawing.Point(12, 88);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 65);
+            this.panel2.Size = new System.Drawing.Size(315, 70);
             this.panel2.TabIndex = 6;
             // 
             // label4
@@ -140,8 +141,18 @@ namespace SortingAlgorithms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Location = new System.Drawing.Point(333, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(455, 136);
+            this.panel3.Size = new System.Drawing.Size(455, 146);
             this.panel3.TabIndex = 3;
+            // 
+            // BubbleSortButton
+            // 
+            this.BubbleSortButton.Location = new System.Drawing.Point(12, 164);
+            this.BubbleSortButton.Name = "BubbleSortButton";
+            this.BubbleSortButton.Size = new System.Drawing.Size(99, 32);
+            this.BubbleSortButton.TabIndex = 0;
+            this.BubbleSortButton.Text = "Bubble Sort";
+            this.BubbleSortButton.UseVisualStyleBackColor = true;
+            this.BubbleSortButton.Click += new System.EventHandler(this.BubbleSortButton_Click);
             // 
             // Form1
             // 
@@ -149,6 +160,7 @@ namespace SortingAlgorithms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.BubbleSortButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
@@ -176,6 +188,7 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Button FillButton;
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button BubbleSortButton;
     }
 }
 

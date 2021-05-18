@@ -8,29 +8,25 @@ namespace Algorithms
 {
     public class BubbleSort<T> : AlgorithmBase<T> where T : IComparable
     {
+        public BubbleSort(IEnumerable<T> items) : base(items) { }
+
+        public BubbleSort() { }
+
         protected override void MakeSort()
         {
             var count = Items.Count;
-            for (int i = 0; i < count; i++)
+
+            for (int j = 0; j < count; j++)
             {
-                var sc = SwopCount;
-
-                for (int j = 0; j < count - i - 1; j++)
+                for (int i = 0; i < count - j - 1; i++)
                 {
-                    var a = Items[j];
-                    var b = Items[j + 1];
+                    var a = Items[i];
+                    var b = Items[i + 1];
 
-                    if (a.CompareTo(b) == 1)
+                    if (Compare(a, b) == 1)
                     {
-                        Swop(j, j + 1);
-
-                        ComparisonCount++;
+                        Swop(i, i + 1);
                     }
-                }
-
-                if (sc == SwopCount)
-                {
-                    break;
                 }
             }
         }
