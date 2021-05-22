@@ -19,11 +19,9 @@ namespace Algorithms
                 
                 for (int i = left; i < right; i++)
                 {
-                    if (Items[i].CompareTo(Items[i + 1]) == 1)
+                    if (Compare(Items[i], Items[i + 1]) == 1)
                     {
                         Swop(i, i + 1);
-
-                        ComparisonCount++;
                     }
                 }
                 right--;
@@ -35,11 +33,9 @@ namespace Algorithms
 
                 for (int i = right; i > left; i--)
                 {
-                    if (Items[i].CompareTo(Items[i - 1]) == -1)
+                    if (Compare(Items[i], Items[i - 1]) == -1)
                     {
                         Swop(i, i - 1);
-
-                        ComparisonCount++;
                     }
                 }
                 left++;

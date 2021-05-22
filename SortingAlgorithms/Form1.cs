@@ -26,8 +26,8 @@ namespace SortingAlgorithms
             {
                 var item = new SortedItem(value, items.Count);
                 items.Add(item);
-                panel3.Controls.Add(item.ProgressBar);
-                panel3.Controls.Add(item.Label);
+
+                RefreshItems();
             }
 
             AddTextBox.Text = "";
@@ -43,20 +43,44 @@ namespace SortingAlgorithms
                 {
                     var item = new SortedItem(rnd.Next(100), items.Count);
                     items.Add(item);
-                    panel3.Controls.Add(item.ProgressBar);
-                    panel3.Controls.Add(item.Label);
                 }
+
+                RefreshItems();
             }
 
             FillTextBox.Text = "";
         }
+        private void DrawItems(List<SortedItem> items)
+        {
+            panel3.Controls.Clear();
+
+            foreach(var item in items)
+            {
+                panel3.Controls.Add(item.ProgressBar);
+                panel3.Controls.Add(item.Label);
+            }
+        }
+        private void RefreshItems()
+        {
+            foreach (var item in items)
+            {
+                item.Refresh();
+            }
+
+            DrawItems(items);
+        }
 
         private void BubbleSortButton_Click(object sender, EventArgs e)
         {
+            RefreshItems();
+
             var bubble = new BubbleSort<SortedItem>(items);
             bubble.CompareEvent += Bubble_CompareEvent;
             bubble.SwopEvent += Bubble_SwopEvent;
-            bubble.Sort();
+            var time = bubble.Sort();
+            TimeLabel.Text = "Время: " + time.Milliseconds;
+            CompareLabel.Text = "Количество сравнений: " + bubble.ComparisonCount;
+            SwopLabel.Text = "Количество обменов: " + bubble.SwopCount;
         }
 
         private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
