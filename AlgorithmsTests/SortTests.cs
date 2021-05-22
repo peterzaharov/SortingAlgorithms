@@ -1,10 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Algorithms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithms.Tests
 {
@@ -97,6 +94,23 @@ namespace Algorithms.Tests
                 for (int i = 0; i < Items.Count; i++)
                 {
                     Assert.AreEqual(Sorted[i], shell.Items[i]);
+                }
+            }
+
+            [TestMethod()]
+            public void TreeSortTest()
+            {
+                //arrange
+                var tree = new TreeSort<int>();
+                tree.Items.AddRange(Items);
+
+                //act
+                tree.Sort();
+
+                //assert
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    Assert.AreEqual(Sorted[i], tree.Items[i]);
                 }
             }
         }
