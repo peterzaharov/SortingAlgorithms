@@ -61,6 +61,9 @@ namespace SortingAlgorithms
 
         private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
+            var temp = e.Item1.Number;
+            e.Item1.SetPosition(e.Item2.Number);
+            e.Item2.SetPosition(temp);
             panel3.Refresh();
         }
 
@@ -70,11 +73,5 @@ namespace SortingAlgorithms
             e.Item2.SetColor(Color.Green);
             panel3.Refresh();
         }
-
-        /*private void Swop(SortedItem a, SortedItem b)
-        {
-            a.SetColor(Color.Red);
-            b.SetColor(Color.Green);
-        }*/
     }
 }
