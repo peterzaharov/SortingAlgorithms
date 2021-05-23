@@ -44,6 +44,9 @@ namespace SortingAlgorithms
             this.TimeLabel = new System.Windows.Forms.Label();
             this.CompareLabel = new System.Windows.Forms.Label();
             this.SwopLabel = new System.Windows.Forms.Label();
+            this.CocktailSortButton = new System.Windows.Forms.Button();
+            this.InsertionSortButton = new System.Windows.Forms.Button();
+            this.ShellSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +75,7 @@ namespace SortingAlgorithms
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Controls.Add(this.AddTextBox);
             this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 57);
             this.panel1.TabIndex = 5;
@@ -90,7 +93,7 @@ namespace SortingAlgorithms
             // AddButton
             // 
             this.AddButton.Location = new System.Drawing.Point(159, 20);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 24);
             this.AddButton.TabIndex = 1;
@@ -101,7 +104,7 @@ namespace SortingAlgorithms
             // AddTextBox
             // 
             this.AddTextBox.Location = new System.Drawing.Point(4, 21);
-            this.AddTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddTextBox.Multiline = true;
             this.AddTextBox.Name = "AddTextBox";
             this.AddTextBox.Size = new System.Drawing.Size(151, 23);
@@ -113,7 +116,7 @@ namespace SortingAlgorithms
             this.panel2.Controls.Add(this.FillButton);
             this.panel2.Controls.Add(this.FillTextBox);
             this.panel2.Location = new System.Drawing.Point(9, 72);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(236, 57);
             this.panel2.TabIndex = 6;
@@ -131,7 +134,7 @@ namespace SortingAlgorithms
             // FillButton
             // 
             this.FillButton.Location = new System.Drawing.Point(159, 20);
-            this.FillButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FillButton.Margin = new System.Windows.Forms.Padding(2);
             this.FillButton.Name = "FillButton";
             this.FillButton.Size = new System.Drawing.Size(75, 24);
             this.FillButton.TabIndex = 1;
@@ -142,7 +145,7 @@ namespace SortingAlgorithms
             // FillTextBox
             // 
             this.FillTextBox.Location = new System.Drawing.Point(4, 21);
-            this.FillTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FillTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FillTextBox.Multiline = true;
             this.FillTextBox.Name = "FillTextBox";
             this.FillTextBox.Size = new System.Drawing.Size(151, 23);
@@ -153,7 +156,7 @@ namespace SortingAlgorithms
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Location = new System.Drawing.Point(250, 10);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(341, 119);
             this.panel3.TabIndex = 3;
@@ -161,9 +164,9 @@ namespace SortingAlgorithms
             // BubbleSortButton
             // 
             this.BubbleSortButton.Location = new System.Drawing.Point(9, 133);
-            this.BubbleSortButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BubbleSortButton.Margin = new System.Windows.Forms.Padding(2);
             this.BubbleSortButton.Name = "BubbleSortButton";
-            this.BubbleSortButton.Size = new System.Drawing.Size(74, 26);
+            this.BubbleSortButton.Size = new System.Drawing.Size(74, 23);
             this.BubbleSortButton.TabIndex = 0;
             this.BubbleSortButton.Text = "Bubble Sort";
             this.BubbleSortButton.UseVisualStyleBackColor = true;
@@ -172,7 +175,7 @@ namespace SortingAlgorithms
             // TimeLabel
             // 
             this.TimeLabel.AutoSize = true;
-            this.TimeLabel.Location = new System.Drawing.Point(7, 170);
+            this.TimeLabel.Location = new System.Drawing.Point(6, 228);
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(46, 13);
             this.TimeLabel.TabIndex = 7;
@@ -181,7 +184,7 @@ namespace SortingAlgorithms
             // CompareLabel
             // 
             this.CompareLabel.AutoSize = true;
-            this.CompareLabel.Location = new System.Drawing.Point(7, 192);
+            this.CompareLabel.Location = new System.Drawing.Point(7, 251);
             this.CompareLabel.Name = "CompareLabel";
             this.CompareLabel.Size = new System.Drawing.Size(129, 13);
             this.CompareLabel.TabIndex = 8;
@@ -190,17 +193,50 @@ namespace SortingAlgorithms
             // SwopLabel
             // 
             this.SwopLabel.AutoSize = true;
-            this.SwopLabel.Location = new System.Drawing.Point(7, 214);
+            this.SwopLabel.Location = new System.Drawing.Point(6, 291);
             this.SwopLabel.Name = "SwopLabel";
             this.SwopLabel.Size = new System.Drawing.Size(119, 13);
             this.SwopLabel.TabIndex = 9;
             this.SwopLabel.Text = "Количество обменов: ";
+            // 
+            // CocktailSortButton
+            // 
+            this.CocktailSortButton.Location = new System.Drawing.Point(88, 133);
+            this.CocktailSortButton.Name = "CocktailSortButton";
+            this.CocktailSortButton.Size = new System.Drawing.Size(75, 23);
+            this.CocktailSortButton.TabIndex = 10;
+            this.CocktailSortButton.Text = "Cocktail Sort";
+            this.CocktailSortButton.UseVisualStyleBackColor = true;
+            this.CocktailSortButton.Click += new System.EventHandler(this.CocktailSortButton_Click);
+            // 
+            // InsertionSortButton
+            // 
+            this.InsertionSortButton.Location = new System.Drawing.Point(170, 133);
+            this.InsertionSortButton.Name = "InsertionSortButton";
+            this.InsertionSortButton.Size = new System.Drawing.Size(75, 23);
+            this.InsertionSortButton.TabIndex = 11;
+            this.InsertionSortButton.Text = "Insert Sort";
+            this.InsertionSortButton.UseVisualStyleBackColor = true;
+            this.InsertionSortButton.Click += new System.EventHandler(this.InsertionSortButton_Click);
+            // 
+            // ShellSortButton
+            // 
+            this.ShellSortButton.Location = new System.Drawing.Point(9, 161);
+            this.ShellSortButton.Name = "ShellSortButton";
+            this.ShellSortButton.Size = new System.Drawing.Size(74, 23);
+            this.ShellSortButton.TabIndex = 12;
+            this.ShellSortButton.Text = "Shell Sort";
+            this.ShellSortButton.UseVisualStyleBackColor = true;
+            this.ShellSortButton.Click += new System.EventHandler(this.ShellSortButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.ShellSortButton);
+            this.Controls.Add(this.InsertionSortButton);
+            this.Controls.Add(this.CocktailSortButton);
             this.Controls.Add(this.SwopLabel);
             this.Controls.Add(this.CompareLabel);
             this.Controls.Add(this.TimeLabel);
@@ -210,7 +246,7 @@ namespace SortingAlgorithms
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -238,6 +274,9 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label CompareLabel;
         private System.Windows.Forms.Label SwopLabel;
+        private System.Windows.Forms.Button CocktailSortButton;
+        private System.Windows.Forms.Button InsertionSortButton;
+        private System.Windows.Forms.Button ShellSortButton;
     }
 }
 
