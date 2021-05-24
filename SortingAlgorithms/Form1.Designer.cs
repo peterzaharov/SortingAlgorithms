@@ -48,6 +48,7 @@ namespace SortingAlgorithms
             this.InsertionSortButton = new System.Windows.Forms.Button();
             this.ShellSortButton = new System.Windows.Forms.Button();
             this.SelectionSortButton = new System.Windows.Forms.Button();
+            this.HeapSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -234,7 +235,7 @@ namespace SortingAlgorithms
             // 
             // SelectionSortButton
             // 
-            this.SelectionSortButton.Location = new System.Drawing.Point(439, 164);
+            this.SelectionSortButton.Location = new System.Drawing.Point(790, 164);
             this.SelectionSortButton.Name = "SelectionSortButton";
             this.SelectionSortButton.Size = new System.Drawing.Size(115, 28);
             this.SelectionSortButton.TabIndex = 13;
@@ -242,11 +243,22 @@ namespace SortingAlgorithms
             this.SelectionSortButton.UseVisualStyleBackColor = true;
             this.SelectionSortButton.Click += new System.EventHandler(this.SelectionSortButton_Click);
             // 
+            // HeapSortButton
+            // 
+            this.HeapSortButton.Location = new System.Drawing.Point(439, 164);
+            this.HeapSortButton.Name = "HeapSortButton";
+            this.HeapSortButton.Size = new System.Drawing.Size(89, 28);
+            this.HeapSortButton.TabIndex = 14;
+            this.HeapSortButton.Text = "Heap Sort";
+            this.HeapSortButton.UseVisualStyleBackColor = true;
+            this.HeapSortButton.Click += new System.EventHandler(this.HeapSortButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 450);
+            this.Controls.Add(this.HeapSortButton);
             this.Controls.Add(this.SelectionSortButton);
             this.Controls.Add(this.ShellSortButton);
             this.Controls.Add(this.InsertionSortButton);
@@ -292,6 +304,7 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Button InsertionSortButton;
         private System.Windows.Forms.Button ShellSortButton;
         private System.Windows.Forms.Button SelectionSortButton;
+        private System.Windows.Forms.Button HeapSortButton;
     }
 }
 

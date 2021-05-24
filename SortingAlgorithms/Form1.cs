@@ -1,4 +1,5 @@
 ﻿using Algorithms;
+using Algorithms.DataStructures;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -85,6 +86,12 @@ namespace SortingAlgorithms
         {
             RefreshItems();
 
+            for (int i = 0; i < algorithm.Items.Count; i++)
+            {
+                algorithm.Items[i].SetPosition(i);
+            }
+            panel3.Refresh();
+
             algorithm.CompareEvent += Algorithm_CompareEvent;
             algorithm.SwopEvent += Algorithm_SwopEvent;
             var time = algorithm.Sort();
@@ -116,6 +123,12 @@ namespace SortingAlgorithms
         {
             var selection = new ShellSort<SortedItem>(items);
             Button_Click(selection);
+        }
+
+        private void HeapSortButton_Click(object sender, EventArgs e)
+        {
+            var heap = new Heap<SortedItem>(items);
+            Button_Click(heap);
         }
     }
 }

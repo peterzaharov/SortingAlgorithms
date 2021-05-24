@@ -9,9 +9,7 @@ namespace Algorithms
     public class BubbleSort<T> : AlgorithmBase<T> where T : IComparable
     {
         public BubbleSort(IEnumerable<T> items) : base(items) { }
-
         public BubbleSort() { }
-
         protected override void MakeSort()
         {
             var count = Items.Count;
