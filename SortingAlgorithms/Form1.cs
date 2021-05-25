@@ -124,11 +124,15 @@ namespace SortingAlgorithms
             var selection = new ShellSort<SortedItem>(items);
             Button_Click(selection);
         }
-
         private void HeapSortButton_Click(object sender, EventArgs e)
         {
             var heap = new Heap<SortedItem>(items);
             Button_Click(heap);
+        }
+        private void GnomeSortButton_Click(object sender, EventArgs e)
+        {
+            var gnome = new GnomeSort<SortedItem>(items);
+            Button_Click(gnome);
         }
     }
 }

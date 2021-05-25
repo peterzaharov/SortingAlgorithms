@@ -49,6 +49,7 @@ namespace SortingAlgorithms
             this.ShellSortButton = new System.Windows.Forms.Button();
             this.SelectionSortButton = new System.Windows.Forms.Button();
             this.HeapSortButton = new System.Windows.Forms.Button();
+            this.GnomeSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -203,7 +204,7 @@ namespace SortingAlgorithms
             // CocktailSortButton
             // 
             this.CocktailSortButton.Location = new System.Drawing.Point(117, 164);
-            this.CocktailSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CocktailSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.CocktailSortButton.Name = "CocktailSortButton";
             this.CocktailSortButton.Size = new System.Drawing.Size(100, 28);
             this.CocktailSortButton.TabIndex = 10;
@@ -214,7 +215,7 @@ namespace SortingAlgorithms
             // InsertionSortButton
             // 
             this.InsertionSortButton.Location = new System.Drawing.Point(224, 164);
-            this.InsertionSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InsertionSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.InsertionSortButton.Name = "InsertionSortButton";
             this.InsertionSortButton.Size = new System.Drawing.Size(100, 28);
             this.InsertionSortButton.TabIndex = 11;
@@ -225,7 +226,7 @@ namespace SortingAlgorithms
             // ShellSortButton
             // 
             this.ShellSortButton.Location = new System.Drawing.Point(333, 164);
-            this.ShellSortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShellSortButton.Margin = new System.Windows.Forms.Padding(4);
             this.ShellSortButton.Name = "ShellSortButton";
             this.ShellSortButton.Size = new System.Drawing.Size(99, 28);
             this.ShellSortButton.TabIndex = 12;
@@ -253,11 +254,22 @@ namespace SortingAlgorithms
             this.HeapSortButton.UseVisualStyleBackColor = true;
             this.HeapSortButton.Click += new System.EventHandler(this.HeapSortButton_Click);
             // 
+            // GnomeSortButton
+            // 
+            this.GnomeSortButton.Location = new System.Drawing.Point(534, 163);
+            this.GnomeSortButton.Name = "GnomeSortButton";
+            this.GnomeSortButton.Size = new System.Drawing.Size(96, 29);
+            this.GnomeSortButton.TabIndex = 15;
+            this.GnomeSortButton.Text = "Gnome Sort";
+            this.GnomeSortButton.UseVisualStyleBackColor = true;
+            this.GnomeSortButton.Click += new System.EventHandler(this.GnomeSortButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 450);
+            this.Controls.Add(this.GnomeSortButton);
             this.Controls.Add(this.HeapSortButton);
             this.Controls.Add(this.SelectionSortButton);
             this.Controls.Add(this.ShellSortButton);
@@ -305,6 +317,7 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Button ShellSortButton;
         private System.Windows.Forms.Button SelectionSortButton;
         private System.Windows.Forms.Button HeapSortButton;
+        private System.Windows.Forms.Button GnomeSortButton;
     }
 }
 
