@@ -50,6 +50,7 @@ namespace SortingAlgorithms
             this.SelectionSortButton = new System.Windows.Forms.Button();
             this.HeapSortButton = new System.Windows.Forms.Button();
             this.GnomeSortButton = new System.Windows.Forms.Button();
+            this.TreeSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -264,11 +265,22 @@ namespace SortingAlgorithms
             this.GnomeSortButton.UseVisualStyleBackColor = true;
             this.GnomeSortButton.Click += new System.EventHandler(this.GnomeSortButton_Click);
             // 
+            // TreeSortButton
+            // 
+            this.TreeSortButton.Location = new System.Drawing.Point(637, 163);
+            this.TreeSortButton.Name = "TreeSortButton";
+            this.TreeSortButton.Size = new System.Drawing.Size(88, 28);
+            this.TreeSortButton.TabIndex = 16;
+            this.TreeSortButton.Text = "Tree Sort";
+            this.TreeSortButton.UseVisualStyleBackColor = true;
+            this.TreeSortButton.Click += new System.EventHandler(this.TreeSortButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 450);
+            this.Controls.Add(this.TreeSortButton);
             this.Controls.Add(this.GnomeSortButton);
             this.Controls.Add(this.HeapSortButton);
             this.Controls.Add(this.SelectionSortButton);
@@ -318,6 +330,7 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Button SelectionSortButton;
         private System.Windows.Forms.Button HeapSortButton;
         private System.Windows.Forms.Button GnomeSortButton;
+        private System.Windows.Forms.Button TreeSortButton;
     }
 }
 
