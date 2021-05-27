@@ -168,7 +168,7 @@ namespace Algorithms.Tests
             public void RadixSortTest()
             {
                 //arrange
-                var radix = new RadixSort<int>();
+                var radix = new LsdRadixSort<int>();
                 radix.Items.AddRange(Items);
 
                 //act
