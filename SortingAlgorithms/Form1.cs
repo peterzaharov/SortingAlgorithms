@@ -169,5 +169,11 @@ namespace SortingAlgorithms
             var msd = new MsdRadixSort<SortedItem>(items);
             Button_Click(msd);
         }
+
+        private void MergeSortButton_Click(object sender, EventArgs e)
+        {
+            var merge = new MergeSort<SortedItem>(items);
+            Button_Click(merge);
+        }
     }
 }

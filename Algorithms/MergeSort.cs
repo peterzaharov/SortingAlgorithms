@@ -12,7 +12,11 @@ namespace Algorithms
         public MergeSort() { }
         protected override void MakeSort()
         {
-            Items = Sort(Items);
+            var sorted = Sort(Items);
+            for (int i = 0; i < sorted.Count; i++)
+            {
+                Set(i, sorted[i]);
+            }
         }
         private List<T> Sort(List<T> items)
         {
@@ -39,7 +43,7 @@ namespace Algorithms
             var rightPointer = 0;
 
             //Итоговая коллекция
-            var result = new List<T>();
+            var result = new List<T>(length);
 
             for (int i = 0; i < length; i++)
             {
