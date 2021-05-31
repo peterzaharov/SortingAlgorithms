@@ -63,14 +63,14 @@ namespace SortingAlgorithms
 
             DrawItems(items);
         }
-        private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void AlgorithmSwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
             e.Item2.SetPosition(temp);
             panel3.Refresh();
         }
-        private void Algorithm_CompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void AlgorithmCompareEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Green);
@@ -82,6 +82,23 @@ namespace SortingAlgorithms
             e.Item2.SetColor(Color.Blue);
             panel3.Refresh();
         }
+        private void AlgorithmSetEvent(object sender, Tuple<int, SortedItem> e)
+        {
+            e.Item2.SetColor(Color.Red);
+            panel3.Refresh();
+
+            Thread.Sleep(20);
+
+            e.Item2.SetPosition(e.Item1);
+            panel3.Refresh();
+
+            Thread.Sleep(20);
+
+            e.Item2.SetColor(Color.Blue);
+            panel3.Refresh();
+
+            Thread.Sleep(20);
+        }
         private void Button_Click(AlgorithmBase<SortedItem> algorithm)
         {
             RefreshItems();
@@ -92,8 +109,9 @@ namespace SortingAlgorithms
             }
             panel3.Refresh();
 
-            algorithm.CompareEvent += Algorithm_CompareEvent;
-            algorithm.SwopEvent += Algorithm_SwopEvent;
+            algorithm.CompareEvent += AlgorithmCompareEvent;
+            algorithm.SwopEvent += AlgorithmSwopEvent;
+            algorithm.SetEvent += AlgorithmSetEvent;
             var time = algorithm.Sort();
             TimeLabel.Text = "Время: " + time.Milliseconds;
             CompareLabel.Text = "Количество сравнений: " + algorithm.ComparisonCount;

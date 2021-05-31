@@ -237,9 +237,9 @@ namespace SortingAlgorithms
             // 
             // SelectionSortButton
             // 
-            this.SelectionSortButton.Location = new System.Drawing.Point(790, 164);
+            this.SelectionSortButton.Location = new System.Drawing.Point(534, 163);
             this.SelectionSortButton.Name = "SelectionSortButton";
-            this.SelectionSortButton.Size = new System.Drawing.Size(115, 28);
+            this.SelectionSortButton.Size = new System.Drawing.Size(115, 30);
             this.SelectionSortButton.TabIndex = 13;
             this.SelectionSortButton.Text = "Selection Sort";
             this.SelectionSortButton.UseVisualStyleBackColor = true;
@@ -257,7 +257,7 @@ namespace SortingAlgorithms
             // 
             // GnomeSortButton
             // 
-            this.GnomeSortButton.Location = new System.Drawing.Point(534, 163);
+            this.GnomeSortButton.Location = new System.Drawing.Point(655, 163);
             this.GnomeSortButton.Name = "GnomeSortButton";
             this.GnomeSortButton.Size = new System.Drawing.Size(96, 29);
             this.GnomeSortButton.TabIndex = 15;
@@ -267,9 +267,9 @@ namespace SortingAlgorithms
             // 
             // TreeSortButton
             // 
-            this.TreeSortButton.Location = new System.Drawing.Point(637, 163);
+            this.TreeSortButton.Location = new System.Drawing.Point(757, 163);
             this.TreeSortButton.Name = "TreeSortButton";
-            this.TreeSortButton.Size = new System.Drawing.Size(88, 28);
+            this.TreeSortButton.Size = new System.Drawing.Size(88, 30);
             this.TreeSortButton.TabIndex = 16;
             this.TreeSortButton.Text = "Tree Sort";
             this.TreeSortButton.UseVisualStyleBackColor = true;

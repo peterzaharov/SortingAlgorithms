@@ -16,8 +16,10 @@ namespace Algorithms
         {
             Items.AddRange(items);
         }
+
         public event EventHandler<Tuple<T, T>> CompareEvent;
         public event EventHandler<Tuple<T, T>> SwopEvent;
+        public event EventHandler<Tuple<int, T>> SetEvent;
         public AlgorithmBase() { }
         protected void Swop(int positionA, int positionB)
         {
@@ -30,6 +32,15 @@ namespace Algorithms
                 SwopCount++;
 
                 SwopEvent?.Invoke(this, new Tuple<T, T>(Items[positionA], Items[positionB]));
+            }
+        }
+        protected void Set(int position, T item)
+        {
+            if(position < Items.Count)
+            {
+                SetEvent?.Invoke(this, new Tuple<int, T>(position, item));
+
+                Items[position] = item;
             }
         }
         public virtual TimeSpan Sort()
