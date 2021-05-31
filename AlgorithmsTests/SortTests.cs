@@ -197,6 +197,23 @@ namespace Algorithms.Tests
                     Assert.AreEqual(Sorted[i], msdRadixSort.Items[i]);
                 }
             }
+
+            [TestMethod()]
+            public void MergeSortTest()
+            {
+                //arrange
+                var mergeSort = new MergeSort<int>();
+                mergeSort.Items.AddRange(Items);
+
+                //act
+                mergeSort.Sort();
+
+                //assert
+                for (int i = 0; i < Items.Count; i++)
+                {
+                    Assert.AreEqual(Sorted[i], mergeSort.Items[i]);
+                }
+            }
         }
     }
 }
