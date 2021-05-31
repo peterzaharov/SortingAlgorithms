@@ -157,5 +157,17 @@ namespace SortingAlgorithms
             var tree = new Tree<SortedItem>(items);
             Button_Click(tree);
         }
+
+        private void LsdRadixSortButton_Click(object sender, EventArgs e)
+        {
+            var lsd = new LsdRadixSort<SortedItem>(items);
+            Button_Click(lsd);
+        }
+
+        private void MsdRadixSortButton_Click(object sender, EventArgs e)
+        {
+            var msd = new MsdRadixSort<SortedItem>(items);
+            Button_Click(msd);
+        }
     }
 }

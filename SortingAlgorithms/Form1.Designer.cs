@@ -51,6 +51,8 @@ namespace SortingAlgorithms
             this.HeapSortButton = new System.Windows.Forms.Button();
             this.GnomeSortButton = new System.Windows.Forms.Button();
             this.TreeSortButton = new System.Windows.Forms.Button();
+            this.LsdRadixSortButton = new System.Windows.Forms.Button();
+            this.MsdRadixSortButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +160,7 @@ namespace SortingAlgorithms
             this.panel3.Location = new System.Drawing.Point(333, 12);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(572, 146);
+            this.panel3.Size = new System.Drawing.Size(1002, 146);
             this.panel3.TabIndex = 3;
             // 
             // BubbleSortButton
@@ -275,11 +277,33 @@ namespace SortingAlgorithms
             this.TreeSortButton.UseVisualStyleBackColor = true;
             this.TreeSortButton.Click += new System.EventHandler(this.TreeSortButton_Click);
             // 
+            // LsdRadixSortButton
+            // 
+            this.LsdRadixSortButton.Location = new System.Drawing.Point(851, 163);
+            this.LsdRadixSortButton.Name = "LsdRadixSortButton";
+            this.LsdRadixSortButton.Size = new System.Drawing.Size(122, 30);
+            this.LsdRadixSortButton.TabIndex = 17;
+            this.LsdRadixSortButton.Text = "LSD Radix Sort";
+            this.LsdRadixSortButton.UseVisualStyleBackColor = true;
+            this.LsdRadixSortButton.Click += new System.EventHandler(this.LsdRadixSortButton_Click);
+            // 
+            // MsdRadixSortButton
+            // 
+            this.MsdRadixSortButton.Location = new System.Drawing.Point(979, 163);
+            this.MsdRadixSortButton.Name = "MsdRadixSortButton";
+            this.MsdRadixSortButton.Size = new System.Drawing.Size(126, 30);
+            this.MsdRadixSortButton.TabIndex = 18;
+            this.MsdRadixSortButton.Text = "MSD Radix Sort";
+            this.MsdRadixSortButton.UseVisualStyleBackColor = true;
+            this.MsdRadixSortButton.Click += new System.EventHandler(this.MsdRadixSortButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 450);
+            this.ClientSize = new System.Drawing.Size(1347, 291);
+            this.Controls.Add(this.MsdRadixSortButton);
+            this.Controls.Add(this.LsdRadixSortButton);
             this.Controls.Add(this.TreeSortButton);
             this.Controls.Add(this.GnomeSortButton);
             this.Controls.Add(this.HeapSortButton);
@@ -331,6 +355,8 @@ namespace SortingAlgorithms
         private System.Windows.Forms.Button HeapSortButton;
         private System.Windows.Forms.Button GnomeSortButton;
         private System.Windows.Forms.Button TreeSortButton;
+        private System.Windows.Forms.Button LsdRadixSortButton;
+        private System.Windows.Forms.Button MsdRadixSortButton;
     }
 }
 
