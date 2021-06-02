@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms", "Algorithms\Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmsTests", "AlgorithmsTests\AlgorithmsTests.csproj", "{7D9DF0AA-916E-41DE-B213-0A61B7999CC3}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{DA94E8B7-503E-4F77-A0F4-3FD92DF0B0A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,8 @@ Global
 		{7D9DF0AA-916E-41DE-B213-0A61B7999CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D9DF0AA-916E-41DE-B213-0A61B7999CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D9DF0AA-916E-41DE-B213-0A61B7999CC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA94E8B7-503E-4F77-A0F4-3FD92DF0B0A0}.Debug|Any CPU.ActiveCfg = Debug
+		{DA94E8B7-503E-4F77-A0F4-3FD92DF0B0A0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
